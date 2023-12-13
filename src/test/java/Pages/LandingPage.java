@@ -12,9 +12,6 @@ public class LandingPage extends BasePage{
     @FindBy(xpath = "//li[@class = 'sub-menu'][2]//a[@onclick=\"s_objectID='Main Menu|Utility|Login';\"]")
     protected WebElement btnLogin;
 
-   /* @FindBy(xpath = "(//a[@class='we-btn-blue-border'])[8]")
-    protected WebElement btnWebCentral;*/
-
     @FindBy(linkText = "Bitdefender Central")
     protected WebElement btnWebCentral;
     @FindBy(id = "onetrust-accept-btn-handler")
