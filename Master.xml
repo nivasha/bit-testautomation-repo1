@@ -2,8 +2,11 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
 <suite name="bitWeb">
+    <listeners>
+        <listener class-name="Utils.ReportManager"/>
+    </listeners>
 
-    <test name="WebsiteCentralTest" thread-count="5">
+    <test name="WebsiteCentralTest">
         <classes>
             <class name="Tests.LoginTest"/>
         </classes>
