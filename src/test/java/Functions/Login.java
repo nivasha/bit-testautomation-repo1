@@ -46,4 +46,8 @@ public class Login extends LoginPage {
         return TestBase.isElementDisplayed(lblErrorPw);
     }
 
+    public boolean isUserLogout(){
+        return TestBase.isElementDisplayed(lblSignin);
+    }
+
 }

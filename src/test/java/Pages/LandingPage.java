@@ -9,7 +9,7 @@ public class LandingPage extends BasePage{
         super(driver);
     }
 
-    @FindBy(xpath = "//li[@class = 'sub-menu'][2]//a[@onclick=\"s_objectID='Main Menu|Utility|Login';\"]")
+    @FindBy(xpath = "//span[normalize-space()='Login']")
     protected WebElement btnLogin;
 
     @FindBy(linkText = "Bitdefender Central")

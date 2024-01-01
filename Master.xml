@@ -9,6 +9,7 @@
     <test name="WebsiteCentralTest">
         <classes>
             <class name="Tests.LoginTest"/>
+            <class name="Tests.LogoutTest"/>
         </classes>
     </test>
 

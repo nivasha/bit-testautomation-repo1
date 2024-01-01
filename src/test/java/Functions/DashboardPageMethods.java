@@ -13,4 +13,9 @@ public class DashboardPageMethods extends Dashboard {
     public boolean isUsernameDisplayed(){
         return TestBase.isElementDisplayed(lblUsername);
     }
+
+    public void userLogout(){
+        TestBase.clickOnElement(btnProfileIcon);
+        TestBase.clickOnElement(btnLogout);
+    }
 }

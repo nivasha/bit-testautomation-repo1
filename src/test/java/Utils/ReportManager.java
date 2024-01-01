@@ -59,7 +59,8 @@ public class ReportManager implements ITestListener {
 
         String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
         String repname = "Test_Report_"+timeStamp+".html";
-        ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/" + repname);
+       // ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter(System.getProperty("user.dir") + "/reports/" + repname);
+        ExtentSparkReporter extentSparkReporter = new ExtentSparkReporter("./"+TestBase.resource.getString("reports")+repname);
         extentSparkReporter.config().setReportName("Website Central Test Reports");
         extentSparkReporter.config().setDocumentTitle("Automation Tests");
         extentSparkReporter.config().setTheme(Theme.DARK);
