@@ -5,6 +5,7 @@ import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,15 +17,13 @@ import java.util.ResourceBundle;
 public class TestBase {
 
     public static WebDriver driver;
-    public ResourceBundle resource;
+    public static ResourceBundle resource= ResourceBundle.getBundle("config");
 
     static JavascriptExecutor js;
 
 
-    @BeforeClass
+    @BeforeSuite
     public void setUp() {
-        resource = ResourceBundle.getBundle("config");
-
         WebDriverManager.firefoxdriver().setup();
         driver = new FirefoxDriver();
         driver.manage().deleteAllCookies();
@@ -81,7 +80,7 @@ public class TestBase {
 
     public String captureScreenshot(String testname) {
         String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        String outputPath = "./screenshots/" + testname + "_" + timestamp + ".png";
+        String outputPath = "./"+ resource.getString("screenshots") + testname + "_" + timestamp + ".png";
         TakesScreenshot takesScreenshot = (TakesScreenshot) driver;
         try {
             File source = takesScreenshot.getScreenshotAs(OutputType.FILE);

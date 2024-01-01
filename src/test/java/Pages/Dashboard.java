@@ -12,18 +12,11 @@ public class Dashboard extends BasePage {
     @FindBy(xpath = "//*[@id='btn_1602656141']/div/div/span")
     protected WebElement lblUsername;
 
-    @FindBy(xpath = "//a[@id ='a_1580325650']")
-    protected WebElement lblMyDevices;
-
-    @FindBy(xpath = "//a[@id ='a_1637061417']")
-    protected WebElement lblPasswordManager;
-
     @FindBy(id = "btn_1602656141")
     protected WebElement btnProfileIcon;
 
     @FindBy(xpath = "//*[@id='a_1602657015_3']/span[2]")
     protected WebElement btnLogout;
-
 
 
 }
