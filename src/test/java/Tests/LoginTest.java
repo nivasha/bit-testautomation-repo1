@@ -4,6 +4,7 @@ import Functions.DashboardPageMethods;
 import Functions.LandingPageMethods;
 import Functions.Login;
 import Utils.DataManager;
+import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
@@ -50,7 +51,7 @@ public class LoginTest extends TestBase {
             }
             softAssert.assertAll();
         } catch (Exception e) {
-            throw new RuntimeException(e.getMessage());
+            Assert.fail();
         }
     }
 }
